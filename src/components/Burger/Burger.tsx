@@ -2,11 +2,11 @@ import React from "react";
 import { BurgerProps } from "../../types";
 import "./Burger.css";
 
-const Burger = ({ header, items }: BurgerProps) => {
+const Burger = ({ header, items, isShow }: BurgerProps) => {
   return (
     <div className="menu">
-      <div className="blur">
-        <div className="menu__content">
+      <div className={isShow ? "blur_active" : "blur"}>
+        <div className={isShow ? "menu__content_active" : "menu__content"}>
           <div className="menu__header">
             {header}
             <ul className="menu__list">

@@ -1,4 +1,5 @@
 import React from "react";
+import { useOutSide } from "../hooks/useOutSide";
 import "../style.css";
 import Burger from "./Burger/Burger";
 
@@ -8,10 +9,15 @@ const Menu = () => {
     { value: "Услуги", href: "/services", icon: "pan_tool" },
     { value: "Магазин", href: "/store", icon: "store" },
   ];
+  const { isShow, ref, setIsShow } = useOutSide(false);
   return (
     <div>
       <nav>
-        <div className="burger-btn">
+        <div
+          ref={ref}
+          onClick={() => setIsShow(!isShow)}
+          className="burger-btn"
+        >
           <span />
         </div>
       </nav>
@@ -694,7 +700,7 @@ const Menu = () => {
           at, provident voluptates fugit excepturi!
         </p>
       </main>
-      <Burger header="Бургер меню" items={items} />
+      <Burger header="Бургер меню" items={items} isShow={isShow} />
     </div>
   );
 };

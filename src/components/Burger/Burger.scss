@@ -10,14 +10,31 @@ a {
   top: 64px;
   left: 0;
   &__content {
+    position: absolute;
     width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    left: -40%;
     background-color: black;
+    transition: all 0.5s ease-in-out;
+    &_active {
+      position: absolute;
+      width: 30%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      left: 0;
+      background-color: black;
+      transition: all 0.5s ease-in-out;
+    }
   }
   &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     color: #fff;
     font-size: 28px;
   }
@@ -25,14 +42,17 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    &_item a {
-      display: flex;
-      align-items: center;
-      & span {
-        margin-right: 10px;
-      }
-      &:hover {
-        color: rgb(142, 161, 179);
+    &_item {
+      margin-bottom: 10px;
+      & a {
+        display: flex;
+        align-items: center;
+        & span {
+          margin-right: 10px;
+        }
+        &:hover {
+          color: rgb(142, 161, 179);
+        }
       }
     }
   }
@@ -42,5 +62,13 @@ a {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background-color: #00000087;
+  background-color: #00000000;
+  transition: all 0.5s ease-in-out;
+  &_active {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #00000087;
+    transition: all 0.5s ease-in-out;
+  }
 }
