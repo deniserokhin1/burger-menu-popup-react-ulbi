@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.modalWindow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  &_active {
+    opacity: 1;
+    pointer-events: all;
+    transition: all 0.2s ease-in-out;
+  }
+  &__content {
+    width: 50vh;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: aliceblue;
+    text-align: center;
+    transform: scale(0.5);
+    transition: all 0.2s ease-out;
+    &_active {
+      transform: scale(1);
+      transition: all 0.2s ease-out;
+    }
+  }
+}

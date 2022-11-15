@@ -104,7 +104,9 @@ a {
   width: 100vw;
   height: 100vh;
   position: absolute;
+  z-index: 5;
   background-color: #00000000;
+  pointer-events: none;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -113,8 +115,22 @@ a {
   width: 100vw;
   height: 100vh;
   position: absolute;
+  z-index: 5;
   background-color: #00000087;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .menu__content_active {
+    width: 100%;
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu {
+    top: 55px;
+  }
 }
 /*# sourceMappingURL=Burger.css.map */
