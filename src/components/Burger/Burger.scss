@@ -1,0 +1,46 @@
+a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  width: 100vh;
+  top: 64px;
+  left: 0;
+  &__content {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+  }
+  &__header {
+    color: #fff;
+    font-size: 28px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &_item a {
+      display: flex;
+      align-items: center;
+      & span {
+        margin-right: 10px;
+      }
+      &:hover {
+        color: rgb(142, 161, 179);
+      }
+    }
+  }
+}
+
+.blur {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #00000087;
+}

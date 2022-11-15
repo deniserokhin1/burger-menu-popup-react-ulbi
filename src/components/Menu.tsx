@@ -1,7 +1,13 @@
 import React from "react";
 import "../style.css";
+import Burger from "./Burger/Burger";
 
 const Menu = () => {
+  const items = [
+    { value: "Главная", href: "/main", icon: "account_box" },
+    { value: "Услуги", href: "/services", icon: "pan_tool" },
+    { value: "Магазин", href: "/store", icon: "store" },
+  ];
   return (
     <div>
       <nav>
@@ -9,7 +15,7 @@ const Menu = () => {
           <span />
         </div>
       </nav>
-      <main>
+      <main className="main">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
           iusto, cum repellat quisquam itaque voluptate accusantium recusandae
@@ -688,6 +694,7 @@ const Menu = () => {
           at, provident voluptates fugit excepturi!
         </p>
       </main>
+      <Burger header="Бургер меню" items={items} />
     </div>
   );
 };
