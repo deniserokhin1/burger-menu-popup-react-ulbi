@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  padding: 80px 50px 50px;
+}
+
+.burger-btn {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.burger-btn:before {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  content: "";
+  position: absolute;
+  top: 0;
+}
+
+.burger-btn:after {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  content: "";
+  position: absolute;
+  bottom: 0;
+}
+
+.burger-btn span {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 9px;
+}
+/*# sourceMappingURL=style.css.map */
